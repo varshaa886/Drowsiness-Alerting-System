@@ -37,7 +37,8 @@ Install the required Python libraries using the following command:
 pip install opencv-python dlib imutils playsound numpy pyserial
 
 ```md
-
+```
+```bash
 ## 🧠 Python Code Overview
 
 The main script used for this project is **`drowsiness_yawn.py`**.  
@@ -51,7 +52,7 @@ It performs **real-time drowsiness and yawn detection** using the following step
 6. Sends a signal to **Arduino** (via serial communication) to activate LED or buzzer when drowsiness is detected.
 
 To run the Python script, use the following command:
-
+```
 ```bash
 python drowsiness_yawn.py --webcam 0
 
