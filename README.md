@@ -1,11 +1,11 @@
-# 🚗 Drowsiness Alerting System
+#  Drowsiness Alerting System
 
 This project detects driver drowsiness and yawning using **OpenCV**, **Dlib**, and **facial landmarks**.  
 If the driver appears sleepy or yawns frequently, the system triggers an **alarm sound** and sends a signal to **Arduino** to activate buzzer and LED alerts.
 
 ---
 
-## 🧠 Features
+##  Features
 - Real-time **eye and mouth monitoring**
 - **Sound alarm** and **Arduino buzzer** integration
 - Works with any standard webcam
@@ -13,7 +13,7 @@ If the driver appears sleepy or yawns frequently, the system triggers an **alarm
 
 ---
 
-## 🧩 Requirements
+##  Requirements
 
 Before running the project, make sure you have the following installed:
 
@@ -39,7 +39,7 @@ pip install opencv-python dlib imutils playsound numpy pyserial
 ```md
 ```
 ```bash
-## 🧠 Python Code Overview
+##  Python Code Overview
 
 The main script used for this project is **`drowsiness_yawn.py`**.  
 It performs **real-time drowsiness and yawn detection** using the following steps:
@@ -62,7 +62,7 @@ python drowsiness_yawn.py --webcam 0
 ```
 ```bash
 
-## 🧩 Hardware Connections (Arduino + OV7670 Camera Module)
+##  Hardware Connections (Arduino + OV7670 Camera Module)
 
 The system uses **Arduino Uno**, **OV7670 camera module**, and **buzzer/LED** for alerting.
 
@@ -82,7 +82,7 @@ The system uses **Arduino Uno**, **OV7670 camera module**, and **buzzer/LED** fo
 
 ---
 
-### 🧠 Working Principle
+###  Working Principle
 
 1. The **Python code** detects drowsiness or yawning using webcam feed.  
 2. When detected, the system sends a **serial signal** (via USB) to Arduino.  
@@ -102,7 +102,7 @@ When it receives the signal `'1'`, it activates the **buzzer** and **LED** to al
 
 ---
 
-### 🧾 Arduino Code
+###  Arduino Code
 
 ```cpp
 // Drowsiness Alert - Arduino Code
@@ -133,12 +133,12 @@ void loop() {
 ```md
 ```
 ```bash
-## 🔧 Hardware Setup and Connections
+##  Hardware Setup and Connections
 
 This project involves both **software (Python)** and **hardware (Arduino + sensors)** components.  
 Follow these steps for proper connections:
 
-### 🧠 Components Used
+###  Components Used
 - Arduino Uno  
 - OV7670 Camera Module *(optional)*  
 - Buzzer  
@@ -158,7 +158,7 @@ Follow these steps for proper connections:
 
 ---
 
-### 📸  OV7670 Camera Connection
+###   OV7670 Camera Connection
 
 If you’re using the OV7670 camera module with Arduino:  
 - Connect **SDA → A4**  
@@ -170,7 +170,7 @@ The camera can be used to test image capture functionality or for future upgrade
 
 ---
 
-### 🖥️ System Integration
+###  System Integration
 
 1. Run the Python script (`drowsiness_yawn.py`) on your computer.  
 2. Connect the Arduino via USB — it will automatically listen for the `'1'` signal.  
@@ -185,11 +185,11 @@ The camera can be used to test image capture functionality or for future upgrade
 ```bash
 ---
 
-## 🧩 Project Workflow
+##  Project Workflow
 
 This project integrates **computer vision**, **machine learning**, and **embedded systems** to detect driver drowsiness and issue timely alerts.
 
-### 🔁 End-to-End Flow
+###  End-to-End Flow
 
 1. **Camera Capture (Webcam / OV7670)**  
    - Captures real-time video frames of the driver’s face.
@@ -214,20 +214,8 @@ This project integrates **computer vision**, **machine learning**, and **embedde
 
 ---
 
-### 🧾 Summary of Data Flow
 
-| Stage | Device / Software | Action |
-|--------|-------------------|--------|
-| 1 | Camera | Captures live face video |
-| 2 | Python + dlib | Detects eyes & mouth landmarks |
-| 3 | Python | Calculates EAR & Lip Distance |
-| 4 | Python | Plays alarm & sends ‘1’ signal |
-| 5 | Arduino | Activates LED & Buzzer |
-| 6 | System | Resets for continuous detection |
-
----
-
-### 🚀 Key Advantages
+###  Key Advantages
 - Works in **real-time** with low latency.  
 - Combines **AI + IoT + Embedded Systems**.  
 - Modular design — easy to extend for advanced features (e.g., GSM alert, cloud logging).
