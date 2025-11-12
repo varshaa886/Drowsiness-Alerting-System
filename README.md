@@ -1,4 +1,4 @@
-#  Drowsiness Alerting System
+#  Real-Time Driver Drowsiness Detection System
 
 This project detects driver drowsiness and yawning using **OpenCV**, **Dlib**, and **facial landmarks**.  
 If the driver appears sleepy or yawns frequently, the system triggers an **alarm sound** and sends a signal to **Arduino** to activate buzzer and LED alerts.
